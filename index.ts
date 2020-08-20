@@ -5,24 +5,21 @@ import './style.css';
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
-let students=[{studentName:"Tholakele",studentSurname:"Cossa",studentAge:24,studentGrade:"11"},{studentName:"Lifa",studentSurname:"khosa",studentAge:20,studentGrade:"12"},{studentName:"Artimiza",studentSurname:"cossa",studentAge:11,studentGrade:"5"}];
+let students=[{studentName:"Tholakele",studentSurname:"Cossa",studentAge:6,studentGrade:"R"},
+{studentName:"Lifa",studentSurname:"khosa",studentAge:14,studentGrade:"7"},
+{studentName:"Artimiza",studentSurname:"Ncobo",studentAge:10,studentGrade:"3"},
+{studentName:"Sphelele",studentSurname:"Mthhembu",studentAge:17,studentGrade:"11"},{studentName:"Tholakele",studentSurname:"Mhlanga",studentAge:8,studentGrade:"2"},
+{studentName:"Rose",studentSurname:"Dube",studentAge:17,studentGrade:"11"},,{studentName:"Tholakele",studentSurname:"Chauke",studentAge:20,studentGrade:"11"},
+{studentName:"Maria",studentSurname:"Ndlovu",studentAge:13,studentGrade:"6"},
+{studentName:"Precious",studentSurname:"Sbiya",studentAge:18,studentGrade:"12"},
+{studentName:"Smangele",studentSurname:"Zwane",studentAge:7,studentGrade:"1"},];
  
 
- function studentHighestAge()
- {
-    let highest;
-   let max=students[0].studentAge;
-   for(let i=0;i<=students[i].studentAge;i++)
-   {
-     if(max<students[i].studentAge)
-     {
-      
-       max=students[i].studentAge;
-      
-     }
-   }
- return max;
- }
+function highestAge()
+{
+   let age;
+   age=students.reduce((prev,current)=>(+prev.studentAge>+current.studentAge? prev:current))
+   return age;
+}
 
-
- console.log(studentHighestAge());
+ console.log(highestAge());
