@@ -14,7 +14,7 @@ const students=[{studentName:"Tholakele",studentSurname:"Cossa",studentAge:6,stu
 {studentName:"Precious",studentSurname:"Sbiya",studentAge:18,studentGrade:"12"},
 {studentName:"Smangele",studentSurname:"Zwane",studentAge:10,studentGrade:"1"},];
  
-
+/*
 function highestAge()
 {
    let age;
@@ -24,7 +24,7 @@ function highestAge()
 
  console.log(highestAge());
 
-
+*/
  
 function total()
 {
